@@ -315,6 +315,7 @@ class Issues(Stream):
         params = {"fields": "*all",
                   "expand": "changelog,transitions",
                   "validateQuery": "strict",
+                  "maxResults": 5,
                   "jql": jql}
         page_num = Context.bookmark(page_num_offset) or 0
         endpoint = "/rest/api/2/search/jql"
